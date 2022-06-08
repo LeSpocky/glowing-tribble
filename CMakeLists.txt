@@ -3,6 +3,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(glowing-tribble
 	LANGUAGES CXX
+	VERSION 1
 )
 
 include(GNUInstallDirs)
