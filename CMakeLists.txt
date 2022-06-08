@@ -5,6 +5,8 @@ project(glowing-tribble
 	LANGUAGES CXX
 )
 
+include(GNUInstallDirs)
+
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PC_HTTPSERVER REQUIRED IMPORTED_TARGET
 				  libhttpserver>=0.19)
@@ -25,3 +27,5 @@ target_link_libraries(hello_world
 		PkgConfig::PC_HTTPSERVER
 #		PkgConfig::PC_MICROHTTPD
 )
+
+install(TARGETS hello_world DESTINATION "${CMAKE_INSTALL_BINDIR}")
